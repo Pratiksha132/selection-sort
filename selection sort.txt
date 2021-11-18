@@ -1,0 +1,16 @@
+import array as arr
+c=arr.array('d',[])
+a1=int(input("Enter the students count:"))
+print("Enter the %i first students perctage:"% (a1))
+mark=list(map(int,input().split(",")))
+n=len(mark)
+for i in range(0,n-1):
+  for j in range(i+1,n):
+      if mark[i]>mark[j]:
+          temp=mark[i]
+          mark[i]=mark[j]
+          mark[j]=temp
+
+print("sorted array is selection sort:")
+for i in range(len(mark)):
+    print("%0.1d"%mark[i])
